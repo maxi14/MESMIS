@@ -1729,7 +1729,18 @@
         <!-- back to top end -->
 
     </div>
-    <!-- JS
+    <script>
+	    $(function(){ 
+     var navMain = $(".offcanvas"); // avoid dependency on #id
+     // "a:not([data-toggle])" - to avoid issues caused
+     // when you have dropdown inside navbar
+     navMain.on("click", "a:not([data-toggle])", null, function () {
+         navMain.collapse('hide');
+     });
+ });
+	    </script>
+	
+	<!-- JS
     ============================================ -->
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
