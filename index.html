@@ -1729,12 +1729,9 @@
 
     </div>
  <script>
-	$(function(){ 
-     var navMain = $("#offcanvasExample");
-     navMain.on("click", "a", null, function () {
-         navMain.collapse('hide');
-     });
- });
+$("#offcanvasExample a").click(function(){
+    $('.offcanvasExample').offcanvas('hide');
+});
 	</script>
     <!-- JS
     ============================================ -->
