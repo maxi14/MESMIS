@@ -275,10 +275,10 @@
 
             <!-- Offcanvas Body Start -->
             <div class="offcanvas-body">
-                <div class="offcanvas-menu">
+                <div class="offcanvas-menu" id="mobmenu">
                     <ul class="main-menu">
                         <li class="active-menu">
-                            <a href="index.html">Home</a>
+                            <a href="index.html" data-toggle="collapse" data-target=".navbar-collapse">Home</a>
                             <!--<ul class="sub-menu">
                                 <li class="active"><a href="index.html">Home 01</a></li>
                                 <li><a href="index-2.html">Home 02</a></li>
@@ -288,10 +288,10 @@
                             </ul>!-->
                         </li>
                         <li>
-                            <a href="#schedule">Schedule</a>
+                            <a href="#schedule" data-toggle="collapse" data-target=".navbar-collapse">Schedule</a>
                         </li>
 			    <li>
-                            <a href="#abt">About us</a>
+                            <a href="#abt" data-toggle="collapse" data-bs-target=".navbar-collapse">About us</a>
                         </li>
                         <!--<li><a href="#">Pages</a>
                             <ul class="sub-menu">
@@ -315,8 +315,8 @@
                                 <li><a href="blog-details.html">Blog Details</a></li>
                             </ul>
                         </li>!-->
-                        <li><a href="#pec">Past events & concerts</a></li>
-			    <li><a href="#contact">Contact</a></li>
+                        <li><a href="#pec" data-toggle="collapse" data-target=".navbar-collapse">Past events & concerts</a></li>
+			    <li><a href="#contact" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -1728,7 +1728,14 @@
         <!-- back to top end -->
 
     </div>
-
+ <script>
+	$(function(){ 
+     var navMain = $("#mobmenu");
+     navMain.on("click", "a", null, function () {
+         navMain.collapse('hide');
+     });
+ });
+	</script>
     <!-- JS
     ============================================ -->
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
